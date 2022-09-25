@@ -1,0 +1,96 @@
+*{
+    padding: 0;
+    margin: 0 auto;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background-color: rgb(0, 0, 0);
+}
+
+.bg-calc{
+    background-color: black;
+    border-radius: 25px;
+    width: 400px;
+    height: 650px;
+    padding: 30px;
+    margin-top: 50px;
+}
+
+.visor-calc{
+    display: inline-block;
+    justify-content: center;
+}
+
+.linha{
+    border: none;
+    border-radius: 4px;
+    width: 100%;
+    height: 70px;
+    text-align: right;
+    background-color: rgb(0, 0, 0);
+    font-size: 52pt;
+    padding: 2px 10px;
+    color: white;
+}
+
+.result{
+    border: none;
+    border-radius: 4px;
+    width: 100%;
+    height: 70px;
+    text-align: right;
+    background-color: rgb(0, 0, 0);
+    font-size: 25pt;
+    padding: 0px 10px;
+    color: rgb(65, 65, 65);
+}
+
+.buttons{
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+}
+
+input[type=button]{
+    font-size: 32pt;
+    padding: 25px;
+    border-radius: 50%;
+    width: 90px;
+    margin-top: 5px;
+}
+
+#Zero{
+    border-radius: 45px;
+    text-align: left;
+    flex-grow: .8;
+}
+
+.bgray{
+    background-color: rgb(129, 129, 129);
+}
+
+.bgray:hover{
+    opacity: 0.8;
+}
+
+.bdarkgray{
+    background-color: rgb(19, 19, 19);
+    color: white;
+}
+
+.bdarkgray:hover{
+    opacity: 0.8;
+}
+
+.borange{
+    background-color: rgb(255, 145, 0);
+    color: white;
+}
+
+.borange:hover{
+    opacity: 0.8;
+}
