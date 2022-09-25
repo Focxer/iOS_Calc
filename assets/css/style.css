@@ -70,7 +70,7 @@ input[type=button]{
 }
 
 .bgray{
-    background-color: rgb(129, 129, 129);
+    background-color: rgb(156, 156, 156);
 }
 
 .bgray:hover{
@@ -78,7 +78,7 @@ input[type=button]{
 }
 
 .bdarkgray{
-    background-color: rgb(19, 19, 19);
+    background-color: rgb(56, 56, 56);
     color: white;
 }
 
