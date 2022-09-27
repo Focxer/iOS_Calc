@@ -78,7 +78,7 @@ function Clique(a){
             valor1 = parseFloat(linha.value);
             op = "%";
             resultado = "";
-            document.getElementById('Percent').style.backgroundColor="lightgreen";
+            document.getElementById('Percent').style.backgroundColor="white";
             linha.value = valor1;
             break;
 
@@ -86,7 +86,10 @@ function Clique(a){
             valor1 = parseFloat(linha.value);
             op = "/";
             resultado = "";
-            document.getElementById('Divided').style.backgroundColor="lightgreen";
+            document.getElementById('Divided').style.backgroundColor="white";
+            document.getElementById('Times').style.backgroundColor="";
+            document.getElementById('Minus').style.backgroundColor="";
+            document.getElementById('Plus').style.backgroundColor="";
             linha.value = valor1;
             break;
 
@@ -94,7 +97,10 @@ function Clique(a){
             valor1 = parseFloat(linha.value);
             op = "*";
             resultado = "";
-            document.getElementById('Times').style.backgroundColor="lightgreen";
+            document.getElementById('Times').style.backgroundColor="white";
+            document.getElementById('Plus').style.backgroundColor="";
+            document.getElementById('Minus').style.backgroundColor="";
+            document.getElementById('Divided').style.backgroundColor="";
             linha.value = valor1;
             break;
 
@@ -102,7 +108,10 @@ function Clique(a){
             valor1 = parseFloat(linha.value);
             op = "-";
             resultado = "";
-            document.getElementById('Minus').style.backgroundColor="lightgreen";
+            document.getElementById('Minus').style.backgroundColor="white";
+            document.getElementById('Times').style.backgroundColor="";
+            document.getElementById('Plus').style.backgroundColor="";
+            document.getElementById('Divided').style.backgroundColor="";
             linha.value = valor1;
             break;
 
@@ -111,7 +120,10 @@ function Clique(a){
             valor1 = parseFloat(linha.value);
             op = "+";
             resultado = "";
-            document.getElementById('Plus').style.backgroundColor="lightgreen";
+            document.getElementById('Plus').style.backgroundColor="white";
+            document.getElementById('Divided').style.backgroundColor="";
+            document.getElementById('Times').style.backgroundColor="";
+            document.getElementById('Minus').style.backgroundColor="";
             linha.value = valor1;
             break;
     }
@@ -148,5 +160,11 @@ function Clique(a){
             valor1 = parseFloat(total);
             document.getElementById('Plus').style.backgroundColor="";
         }          
+    }
+
+    if (a == "Porcento") {
+        temp = valor1 - (valor1 * resultado / 100);
+        total = temp;
+        linha.value = total;
     }
 }
