@@ -9,55 +9,38 @@
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
-    <header>
-        <section>
+    <div class="conteudo">
+        <div class="visor">
+            <input type="text" name="result" id="result" value="" readonly class="result">
+            <input type="text" name="linha" id="linha" value="0" readonly class="linha">
+        </div>
 
-        </section>
-    </header>
-
-    <main>
-        <section>
-            <div class="bg-calc">
-                <div class="visor-calc">
-                    <input type="text" name="result" id="result" value="" readonly class="result">
-                    <input type="text" name="linha" id="linha" value="0" readonly class="linha">
-                </div>
-
-                <div class="buttons">
-                    <input type="button" value="C" name="C" id="C" class="bgray" onclick="Clique('Apagar')">
-                    <input type="button" value="±" name="SoSo" id="SoSo" class="bgray" onclick="Clique('MM')">
-                    <input type="button" value="%" name="Percent" id="Percent" class="bgray" onclick="Clique('Porcento')">
-                    <input type="button" value="÷" name="Divided" id="Divided" class="borange" onclick="Clique('Dividir')">
-            
-                    <input type="button" value="7" name="Seven" id="Seven" class="bdarkgray" onclick="Clique('Sete')">
-                    <input type="button" value="8" name="Eight" id="Eight" class="bdarkgray" onclick="Clique('Oito')">
-                    <input type="button" value="9" name="Nine" id="Nine" class="bdarkgray" onclick="Clique('Nove')">
-                    <input type="button" value="×" name="Times" id="Times" class="borange" onclick="Clique('Multiplicar')">
-            
-                    <input type="button" value="4" name="Four" id="Four" class="bdarkgray" onclick="Clique('Quatro')">
-                    <input type="button" value="5" name="Five" id="Five" class="bdarkgray" onclick="Clique('Cinco')">
-                    <input type="button" value="6" name="Six" id="Six" class="bdarkgray" onclick="Clique('Seis')">
-                    <input type="button" value="-" name="Minus" id="Minus" class="borange" onclick="Clique('Subtrair')">
-            
-                    <input type="button" value="1" name="One" id="One" class="bdarkgray" onclick="Clique('Um')">
-                    <input type="button" value="2" name="Two" id="Two" class="bdarkgray" onclick="Clique('Dois')">
-                    <input type="button" value="3" name="Three" id="Three" class="bdarkgray" onclick="Clique('Tres')">
-                    <input type="button" value="+" name="Plus" id="Plus" class="borange" onclick="Clique('Somar')">
+        <div class="buttons">
+            <input type="button" value="C" name="C" id="C" class="bgray" onclick="Clique('Apagar')">
+            <input type="button" value="±" name="SoSo" id="SoSo" class="bgray" onclick="Clique('MM')">
+            <input type="button" value="%" name="Percent" id="Percent" class="bgray" onclick="Clique('Porcento')">
+            <input type="button" value="÷" name="Divided" id="Divided" class="borange" onclick="Clique('Dividir')">
     
-                    <input type="button" value="0" name="Zero" id="Zero" class="bdarkgray" onclick="Clique('Zero')">
-                    <input type="button" value="," name="Comma" id="Comma" class="bdarkgray" onclick="Clique('Virgula')">
-                    <input type="button" value="=" name="Equal" id="Equal" class="borange" onclick="Clique('Igual')">
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <section>
-
-        </section>
-    </footer>
+            <input type="button" value="7" name="Seven" id="Seven" class="bdarkgray" onclick="Clique('Sete')">
+            <input type="button" value="8" name="Eight" id="Eight" class="bdarkgray" onclick="Clique('Oito')">
+            <input type="button" value="9" name="Nine" id="Nine" class="bdarkgray" onclick="Clique('Nove')">
+            <input type="button" value="×" name="Times" id="Times" class="borange" onclick="Clique('Multiplicar')">
     
+            <input type="button" value="4" name="Four" id="Four" class="bdarkgray" onclick="Clique('Quatro')">
+            <input type="button" value="5" name="Five" id="Five" class="bdarkgray" onclick="Clique('Cinco')">
+            <input type="button" value="6" name="Six" id="Six" class="bdarkgray" onclick="Clique('Seis')">
+            <input type="button" value="-" name="Minus" id="Minus" class="borange" onclick="Clique('Subtrair')">
+    
+            <input type="button" value="1" name="One" id="One" class="bdarkgray" onclick="Clique('Um')">
+            <input type="button" value="2" name="Two" id="Two" class="bdarkgray" onclick="Clique('Dois')">
+            <input type="button" value="3" name="Three" id="Three" class="bdarkgray" onclick="Clique('Tres')">
+            <input type="button" value="+" name="Plus" id="Plus" class="borange" onclick="Clique('Somar')">
+
+            <input type="button" value="0" name="Zero" id="Zero" class="bdarkgray" onclick="Clique('Zero')">
+            <input type="button" value="," name="Comma" id="Comma" class="bdarkgray" onclick="Clique('Virgula')">
+            <input type="button" value="=" name="Equal" id="Equal" class="borange" onclick="Clique('Igual')">
+        </div>
+    </div>
 </body>
 <script src="./assets/js/Clique.js"></script>
 </html>

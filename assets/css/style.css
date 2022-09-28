@@ -1,104 +1,88 @@
-*{
-    padding: 0;
+body *{
     margin: 0 auto;
-    text-align: center;
+    padding: 0;
     font-family: Arial, Helvetica, sans-serif;
 }
 
 body{
-    background-color: rgb(0, 0, 0);
-    margin: 0 auto;
-    padding: 0;
-}
-
-main{
-    max-width: 580px;
-    width: 80%;
-}
-
-.bg-calc{
     background-color: black;
-    border-radius: 25px;
-    width: 400px;
-    height: 650px;
-    padding: 30px;
-    margin-top: 50px;
+    display: flex;
+    align-items: end;
+    min-height: 100% !important;
+    height: 100%;
 }
 
-.visor-calc{
-    display: inline-block;
-    justify-content: center;
-    margin-right: 40px;
+.conteudo{
+    height: 667px;
+    width: 375px;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+}
+
+.visor{
+    display: flex;
+    flex-direction: column;
+    margin-right: 25px;
+    background-color: black;
 }
 
 .linha{
-    border: none;
-    border-radius: 4px;
-    width: 100%;
-    height: 70px;
     text-align: right;
-    background-color: rgb(0, 0, 0);
-    font-size: 52pt;
-    padding: 2px 10px;
+    border: none;
+    font-size: 60pt;
+    width: 100%;
+    background-color: black;
     color: white;
 }
 
 .result{
-    border: none;
-    border-radius: 4px;
-    width: 100%;
-    height: 70px;
     text-align: right;
-    background-color: rgb(0, 0, 0);
-    font-size: 25pt;
-    padding: 0px 10px;
-    color: rgb(65, 65, 65);
+    border: none;
+    font-size: 22pt;
+    width: 100%;
+    background-color: black;
+    color: rgb(97, 97, 97);
+    margin-top: 70px;
 }
 
 .buttons{
-    margin-top: 20px;
     display: flex;
     flex-wrap: wrap;
+    grid-template-columns: 25% 25% 25% 25%;
     justify-content: space-around;
-    width: 100%;
 }
 
-input[type=button]{
+.buttons input[type=button]{
+    height: 80px;
+    width: 80px;
+    border: none;
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -webkit-appearance: none;
     font-size: 32pt;
-    padding: 25px;
-    border-radius: 50%;
-    width: 90px;
-    margin-top: 5px;
+    margin-top: 10px;
 }
 
 #Zero{
-    border-radius: 45px;
+    flex-grow: .7;
+    border-radius: 100px;
+    -webkit-border-radius: 100px;
+    -webkit-appearance: none;
     text-align: left;
-    flex-grow: .8;
+    padding-left: 28px;
 }
 
 .bgray{
-    background-color: rgb(156, 156, 156);
-}
-
-.bgray:hover{
-    opacity: 0.8;
-}
-
-.bdarkgray{
-    background-color: rgb(56, 56, 56);
-    color: white;
-}
-
-.bdarkgray:hover{
-    opacity: 0.8;
+    background-color: gray;
 }
 
 .borange{
-    background-color: rgb(255, 145, 0);
+    background-color: rgb(255, 136, 0);
     color: white;
 }
 
-.borange:hover{
-    opacity: 0.8;
+.bdarkgray{
+    background-color: rgb(58, 58, 58);
+    color: white;
 }

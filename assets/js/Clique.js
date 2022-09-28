@@ -75,18 +75,14 @@ function Clique(a){
             break;
         
         case 'Porcento':
-            valor1 = parseFloat(linha.value);
-            op = "%";
-            resultado = "";
-            document.getElementById('Percent').style.backgroundColor="white";
-            linha.value = valor1;
+            resultado = '';
             break;
 
         case 'Dividir':
             valor1 = parseFloat(linha.value);
             op = "/";
             resultado = "";
-            document.getElementById('Divided').style.backgroundColor="white";
+            document.getElementById('Divided').style.backgroundColor="dodgerblue";
             document.getElementById('Times').style.backgroundColor="";
             document.getElementById('Minus').style.backgroundColor="";
             document.getElementById('Plus').style.backgroundColor="";
@@ -97,7 +93,7 @@ function Clique(a){
             valor1 = parseFloat(linha.value);
             op = "*";
             resultado = "";
-            document.getElementById('Times').style.backgroundColor="white";
+            document.getElementById('Times').style.backgroundColor="dodgerblue";
             document.getElementById('Plus').style.backgroundColor="";
             document.getElementById('Minus').style.backgroundColor="";
             document.getElementById('Divided').style.backgroundColor="";
@@ -108,7 +104,7 @@ function Clique(a){
             valor1 = parseFloat(linha.value);
             op = "-";
             resultado = "";
-            document.getElementById('Minus').style.backgroundColor="white";
+            document.getElementById('Minus').style.backgroundColor="dodgerblue";
             document.getElementById('Times').style.backgroundColor="";
             document.getElementById('Plus').style.backgroundColor="";
             document.getElementById('Divided').style.backgroundColor="";
@@ -120,7 +116,7 @@ function Clique(a){
             valor1 = parseFloat(linha.value);
             op = "+";
             resultado = "";
-            document.getElementById('Plus').style.backgroundColor="white";
+            document.getElementById('Plus').style.backgroundColor="dodgerblue";
             document.getElementById('Divided').style.backgroundColor="";
             document.getElementById('Times').style.backgroundColor="";
             document.getElementById('Minus').style.backgroundColor="";
