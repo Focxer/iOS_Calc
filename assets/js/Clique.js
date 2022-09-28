@@ -64,10 +64,14 @@ function Clique(a){
             valor1 = 0;
             valor2 = 0;
             op = "";
-            document.getElementById('Divided').style.backgroundColor="";
-            document.getElementById('Times').style.backgroundColor="";
-            document.getElementById('Minus').style.backgroundColor="";
             document.getElementById('Plus').style.backgroundColor="";
+            document.getElementById('Plus').style.color="";
+            document.getElementById('Divided').style.backgroundColor="";
+            document.getElementById('Divided').style.color="";
+            document.getElementById('Times').style.backgroundColor="";
+            document.getElementById('Times').style.color="";
+            document.getElementById('Minus').style.backgroundColor="";
+            document.getElementById('Minus').style.color="";
             break;
 
         case 'MM':
@@ -82,7 +86,41 @@ function Clique(a){
             break;
         
         case 'Porcento':
-            resultado = '';
+            if (op == "/") {
+                total = valor1 / (resultado / 100);
+                result.value = valor1 + "÷" + resultado + '%';
+                linha.value = total;
+                valor1 = parseFloat(total);
+                document.getElementById('Percent').style.backgroundColor="";
+                document.getElementById('Percent').style.color="";
+            }
+            else
+                if (op == "*") {
+                    total = (valor1 * resultado / 100);
+                    result.value = valor1 + "x" + resultado + '%';
+                    linha.value = total;
+                    valor1 = parseFloat(total);
+                    document.getElementById('Percent').style.backgroundColor="";
+                    document.getElementById('Percent').style.color="";
+                }
+                else
+                    if (op == "+") {
+                        total = valor1 + (valor1 * resultado / 100);
+                        result.value = valor1 + "+" + resultado + '%';
+                        linha.value = total;
+                        valor1 = parseFloat(total);
+                        document.getElementById('Percent').style.backgroundColor="";
+                        document.getElementById('Percent').style.color="";
+                    }
+                    else
+                        if (op == '-') {
+                            total = valor1 - (valor1 * resultado / 100);
+                            result.value = valor1 + "-" + resultado + '%';
+                            linha.value = total;
+                            valor1 = parseFloat(total);
+                            document.getElementById('Percent').style.backgroundColor="";
+                            document.getElementById('Percent').style.color="";
+                        }
             break;
 
         case 'Virgula':
