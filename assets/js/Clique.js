@@ -71,13 +71,13 @@ function Clique(a){
             break;
 
         case 'MM':
-            total = linha.value;
-            if (linha.value == '-' + resultado) {
-                linha.value = resultado;
+            resultado = linha.value;
+            if (linha.value > 0) {
+                linha.value = '-' + resultado;
             }
             else
-                if (linha.value == resultado) {
-                    linha.value = '-' + resultado;
+                if (linha.value < 0) {
+                    linha.value = parseFloat(resultado) - (parseFloat(resultado) * 2);
                 }
             break;
         
