@@ -68,6 +68,10 @@ body{
     margin-top: 10px;
 }
 
+.buttons input[type=button]:active{
+    animation: Opaco .8s;
+}
+
 #Zero{
     flex-grow: .7;
     border-radius: 100px;
@@ -91,4 +95,15 @@ body{
 .bdarkgray{
     background-color: rgb(58, 58, 58);
     color: white;
+}
+
+@keyframes Opaco{
+    from{
+        background-color: white;
+        opacity: .4;
+    }
+
+    to{
+        opacity: '';
+    }
 }
