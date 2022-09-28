@@ -80,10 +80,11 @@ body{
 
 .bgray{
     background-color: gray;
+    color: black;
 }
 
 .borange{
-    background-color: rgb(255, 136, 0);
+    background-color: rgb(255, 196, 0);
     color: white;
 }
 
