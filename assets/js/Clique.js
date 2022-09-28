@@ -94,10 +94,14 @@ function Clique(a){
             valor1 = parseFloat(linha.value);
             op = "/";
             resultado = "";
-            document.getElementById('Divided').style.backgroundColor="dodgerblue";
+            document.getElementById('Divided').style.backgroundColor="white";
+            document.getElementById('Divided').style.color="rgb(255, 145, 0)";
             document.getElementById('Times').style.backgroundColor="";
+            document.getElementById('Times').style.color="";
             document.getElementById('Minus').style.backgroundColor="";
+            document.getElementById('Minus').style.color="";
             document.getElementById('Plus').style.backgroundColor="";
+            document.getElementById('Plus').style.color="";
             linha.value = valor1;
             break;
 
@@ -105,10 +109,14 @@ function Clique(a){
             valor1 = parseFloat(linha.value);
             op = "*";
             resultado = "";
-            document.getElementById('Times').style.backgroundColor="dodgerblue";
+            document.getElementById('Times').style.backgroundColor="white";
+            document.getElementById('Times').style.color="rgb(255, 145, 0)";
             document.getElementById('Plus').style.backgroundColor="";
+            document.getElementById('Plus').style.color="";
             document.getElementById('Minus').style.backgroundColor="";
+            document.getElementById('Minus').style.color="";
             document.getElementById('Divided').style.backgroundColor="";
+            document.getElementById('Divided').style.color="";
             linha.value = valor1;
             break;
 
@@ -116,10 +124,14 @@ function Clique(a){
             valor1 = parseFloat(linha.value);
             op = "-";
             resultado = "";
-            document.getElementById('Minus').style.backgroundColor="dodgerblue";
-            document.getElementById('Times').style.backgroundColor="";
+            document.getElementById('Minus').style.backgroundColor="white";
+            document.getElementById('Minus').style.color="rgb(255, 145, 0)";
             document.getElementById('Plus').style.backgroundColor="";
+            document.getElementById('Plus').style.color="";
             document.getElementById('Divided').style.backgroundColor="";
+            document.getElementById('Divided').style.color="";
+            document.getElementById('Times').style.backgroundColor="";
+            document.getElementById('Times').style.color="";
             linha.value = valor1;
             break;
 
@@ -128,10 +140,14 @@ function Clique(a){
             valor1 = parseFloat(linha.value);
             op = "+";
             resultado = "";
-            document.getElementById('Plus').style.backgroundColor="dodgerblue";
+            document.getElementById('Plus').style.backgroundColor="white";
+            document.getElementById('Plus').style.color="rgb(255, 145, 0)";
             document.getElementById('Divided').style.backgroundColor="";
+            document.getElementById('Divided').style.color="";
             document.getElementById('Times').style.backgroundColor="";
+            document.getElementById('Times').style.color="";
             document.getElementById('Minus').style.backgroundColor="";
+            document.getElementById('Minus').style.color="";
             linha.value = valor1;
             break;
     }
@@ -143,6 +159,7 @@ function Clique(a){
             linha.value = total;
             valor1 = parseFloat(total);
             document.getElementById('Divided').style.backgroundColor="";
+            document.getElementById('Divided').style.color="";
         }
 
         if (op == "*") {
@@ -151,6 +168,7 @@ function Clique(a){
             linha.value = total;
             valor1 = parseFloat(total);
             document.getElementById('Times').style.backgroundColor="";
+            document.getElementById('TImes').style.color="";
         }
 
         if (op == "-") {
@@ -159,6 +177,7 @@ function Clique(a){
             linha.value = total;
             valor1 = parseFloat(total);
             document.getElementById('Minus').style.backgroundColor="";
+            document.getElementById('Minus').style.color="";
         }
 
         if (op == "+") {
@@ -167,6 +186,7 @@ function Clique(a){
             linha.value = total;
             valor1 = parseFloat(total);
             document.getElementById('Plus').style.backgroundColor="";
+            document.getElementById('Plus').style.color="";
         }          
     }
 }
