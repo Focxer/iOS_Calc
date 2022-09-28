@@ -71,11 +71,23 @@ function Clique(a){
             break;
 
         case 'MM':
-            resultado = '';
+            total = linha.value;
+            if (linha.value == '-' + resultado) {
+                linha.value = resultado;
+            }
+            else
+                if (linha.value == resultado) {
+                    linha.value = '-' + resultado;
+                }
             break;
         
         case 'Porcento':
             resultado = '';
+            break;
+
+        case 'Virgula':
+            resultado = linha.value + '.';
+            linha.value = resultado;
             break;
 
         case 'Dividir':
@@ -150,17 +162,11 @@ function Clique(a){
         }
 
         if (op == "+") {
-            total = parseInt(valor1) + parseInt(resultado);
+            total = parseFloat(valor1) + parseFloat(resultado);
             result.value = valor1 + "+" + resultado;
             linha.value = total;
             valor1 = parseFloat(total);
             document.getElementById('Plus').style.backgroundColor="";
         }          
-    }
-
-    if (a == "Porcento") {
-        temp = valor1 - (valor1 * resultado / 100);
-        total = temp;
-        linha.value = total;
     }
 }

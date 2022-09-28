@@ -4,7 +4,7 @@ body *{
     font-family: Arial, Helvetica, sans-serif;
 }
 
-body{
+html, body{
     background-color: black;
     display: flex;
     min-height: 100% !important;
@@ -53,8 +53,6 @@ body{
     display: flex;
     flex-wrap: wrap;
     grid-template-columns: 25% 25% 25% 25%;
-    justify-content: space-around;
-    margin-bottom: 10px;
 }
 
 .buttons input[type=button]{
