@@ -15,7 +15,7 @@ html, body{
 }
 
 .conteudo{
-    height: 650px;
+    height: 600px;
     width: 360px;
     background-color: black;
     display: flex;

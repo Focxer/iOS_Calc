@@ -5,11 +5,24 @@ var valor1 = "";
     total = "0";
 
 function ACValue() {
-    if (linha.value>0 || linha.value<0) {
+    ac = parseFloat(linha.value);
+
+    if (ac>0 || ac<0) {
         AllClear.value = "C";
     } else {
         AllCLear.value = "AC";
     }
+}
+
+function Color() {
+    document.getElementById('Plus').style.backgroundColor="";
+    document.getElementById('Plus').style.color="";
+    document.getElementById('Divided').style.backgroundColor="";
+    document.getElementById('Divided').style.color="";
+    document.getElementById('Times').style.backgroundColor="";
+    document.getElementById('Times').style.color="";
+    document.getElementById('Minus').style.backgroundColor="";
+    document.getElementById('Minus').style.color="";
 }
 
 function Clique(a){
@@ -82,15 +95,8 @@ function Clique(a){
             valor1 = 0;
             valor2 = 0;
             op = "";
-            document.getElementById('Plus').style.backgroundColor="";
-            document.getElementById('Plus').style.color="";
-            document.getElementById('Divided').style.backgroundColor="";
-            document.getElementById('Divided').style.color="";
-            document.getElementById('Times').style.backgroundColor="";
-            document.getElementById('Times').style.color="";
-            document.getElementById('Minus').style.backgroundColor="";
-            document.getElementById('Minus').style.color="";
             AllClear.value = "AC";
+            Color();
             break;
 
         case 'MM':
@@ -102,17 +108,15 @@ function Clique(a){
                 if (linha.value < 0) {
                     linha.value = parseFloat(resultado) - (parseFloat(resultado) * 2);
                 }
-            ACValue();
             break;
         
         case 'Porcento':
+            Color();
             if (op == "/") {
                 total = valor1 / (resultado / 100);
                 result.value = valor1 + "÷" + resultado + '%';
                 linha.value = total;
                 valor1 = parseFloat(total);
-                document.getElementById('Percent').style.backgroundColor="";
-                document.getElementById('Percent').style.color="";
             }
             else
                 if (op == "*") {
@@ -120,17 +124,13 @@ function Clique(a){
                     result.value = valor1 + "x" + resultado + '%';
                     linha.value = total;
                     valor1 = parseFloat(total);
-                    document.getElementById('Percent').style.backgroundColor="";
-                    document.getElementById('Percent').style.color="";
                 }
                 else
                     if (op == "+") {
                         total = valor1 + (valor1 * resultado / 100);
                         result.value = valor1 + "+" + resultado + '%';
                         linha.value = total;
-                        valor1 = parseFloat(total);
-                        document.getElementById('Percent').style.backgroundColor="";
-                        document.getElementById('Percent').style.color="";
+                        valor1 = parseFloat(total);;
                     }
                     else
                         if (op == '-') {
@@ -138,64 +138,42 @@ function Clique(a){
                             result.value = valor1 + "-" + resultado + '%';
                             linha.value = total;
                             valor1 = parseFloat(total);
-                            document.getElementById('Percent').style.backgroundColor="";
-                            document.getElementById('Percent').style.color="";
                         }
-            ACValue();
             break;
 
         case 'Virgula':
             resultado = linha.value + '.';
             linha.value = resultado;
-            ACValue();
             break;
 
         case 'Dividir':
             valor1 = parseFloat(linha.value);
             op = "/";
             resultado = "";
+            Color();
             document.getElementById('Divided').style.backgroundColor="white";
             document.getElementById('Divided').style.color="rgb(255, 145, 0)";
-            document.getElementById('Times').style.backgroundColor="";
-            document.getElementById('Times').style.color="";
-            document.getElementById('Minus').style.backgroundColor="";
-            document.getElementById('Minus').style.color="";
-            document.getElementById('Plus').style.backgroundColor="";
-            document.getElementById('Plus').style.color="";
             linha.value = valor1;
-            ACValue();
             break;
 
         case 'Multiplicar':
             valor1 = parseFloat(linha.value);
             op = "*";
             resultado = "";
+            Color();
             document.getElementById('Times').style.backgroundColor="white";
             document.getElementById('Times').style.color="rgb(255, 145, 0)";
-            document.getElementById('Plus').style.backgroundColor="";
-            document.getElementById('Plus').style.color="";
-            document.getElementById('Minus').style.backgroundColor="";
-            document.getElementById('Minus').style.color="";
-            document.getElementById('Divided').style.backgroundColor="";
-            document.getElementById('Divided').style.color="";
             linha.value = valor1;
-            ACValue();
             break;
 
         case 'Subtrair':
             valor1 = parseFloat(linha.value);
             op = "-";
             resultado = "";
+            Color();
             document.getElementById('Minus').style.backgroundColor="white";
             document.getElementById('Minus').style.color="rgb(255, 145, 0)";
-            document.getElementById('Plus').style.backgroundColor="";
-            document.getElementById('Plus').style.color="";
-            document.getElementById('Divided').style.backgroundColor="";
-            document.getElementById('Divided').style.color="";
-            document.getElementById('Times').style.backgroundColor="";
-            document.getElementById('Times').style.color="";
             linha.value = valor1;
-            ACValue();
             break;
 
             
@@ -203,16 +181,10 @@ function Clique(a){
             valor1 = parseFloat(linha.value);
             op = "+";
             resultado = "";
+            Color();
             document.getElementById('Plus').style.backgroundColor="white";
             document.getElementById('Plus').style.color="rgb(255, 145, 0)";
-            document.getElementById('Divided').style.backgroundColor="";
-            document.getElementById('Divided').style.color="";
-            document.getElementById('Times').style.backgroundColor="";
-            document.getElementById('Times').style.color="";
-            document.getElementById('Minus').style.backgroundColor="";
-            document.getElementById('Minus').style.color="";
             linha.value = valor1;
-            ACValue();
             break;
     }
 
@@ -222,8 +194,7 @@ function Clique(a){
             result.value = valor1 + "÷" + resultado;
             linha.value = total;
             valor1 = parseFloat(total);
-            document.getElementById('Divided').style.backgroundColor="";
-            document.getElementById('Divided').style.color="";
+            Color();
             ACValue();
         }
 
@@ -232,8 +203,7 @@ function Clique(a){
             result.value = valor1 + "x" + resultado;
             linha.value = total;
             valor1 = parseFloat(total);
-            document.getElementById('Times').style.backgroundColor="";
-            document.getElementById('TImes').style.color="";
+            Color();
             ACValue();
         }
 
@@ -242,8 +212,7 @@ function Clique(a){
             result.value = valor1 + "-" + resultado;
             linha.value = total;
             valor1 = parseFloat(total);
-            document.getElementById('Minus').style.backgroundColor="";
-            document.getElementById('Minus').style.color="";
+            Color();
             ACValue();
         }
 
@@ -252,8 +221,7 @@ function Clique(a){
             result.value = valor1 + "+" + resultado;
             linha.value = total;
             valor1 = parseFloat(total);
-            document.getElementById('Plus').style.backgroundColor="";
-            document.getElementById('Plus').style.color="";
+            Color();
             ACValue();
         }          
     }
