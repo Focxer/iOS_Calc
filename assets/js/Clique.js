@@ -4,56 +4,74 @@ var valor1 = "";
     resultado = "";
     total = "0";
 
+function ACValue() {
+    if (linha.value>0 || linha.value<0) {
+        AllClear.value = "C";
+    } else {
+        AllCLear.value = "AC";
+    }
+}
+
 function Clique(a){
     switch(a){
         case 'Um':
             resultado = resultado + 1;
             linha.value = resultado;
+            ACValue();
             break;
 
         case 'Dois':
             resultado = resultado + 2;
             linha.value = resultado;
+            ACValue();
             break;
 
         case 'Tres':
             resultado = resultado + 3;
             linha.value = resultado;
+            ACValue();
             break;
 
         case 'Quatro':
             resultado = resultado + 4;
             linha.value = resultado;
+            ACValue();
             break;
 
         case 'Cinco':
             resultado = resultado + 5;
             linha.value = resultado;
+            ACValue();
             break;
 
         case 'Seis':
             resultado = resultado + 6;
             linha.value = resultado;
+            ACValue();
             break;
 
         case 'Sete':
             resultado = resultado + 7;
             linha.value = resultado;
+            ACValue();
             break;
 
         case 'Oito':
             resultado = resultado + 8;
             linha.value = resultado;
+            ACValue();
             break;
 
         case 'Nove':
             resultado = resultado + 9;
             linha.value = resultado;
+            ACValue();
             break;
 
         case 'Zero':
             resultado = resultado + 0;
             linha.value = resultado;
+            ACValue();
             break;
 
         case 'Apagar':
@@ -72,6 +90,7 @@ function Clique(a){
             document.getElementById('Times').style.color="";
             document.getElementById('Minus').style.backgroundColor="";
             document.getElementById('Minus').style.color="";
+            AllClear.value = "AC";
             break;
 
         case 'MM':
@@ -83,6 +102,7 @@ function Clique(a){
                 if (linha.value < 0) {
                     linha.value = parseFloat(resultado) - (parseFloat(resultado) * 2);
                 }
+            ACValue();
             break;
         
         case 'Porcento':
@@ -121,11 +141,13 @@ function Clique(a){
                             document.getElementById('Percent').style.backgroundColor="";
                             document.getElementById('Percent').style.color="";
                         }
+            ACValue();
             break;
 
         case 'Virgula':
             resultado = linha.value + '.';
             linha.value = resultado;
+            ACValue();
             break;
 
         case 'Dividir':
@@ -141,6 +163,7 @@ function Clique(a){
             document.getElementById('Plus').style.backgroundColor="";
             document.getElementById('Plus').style.color="";
             linha.value = valor1;
+            ACValue();
             break;
 
         case 'Multiplicar':
@@ -156,6 +179,7 @@ function Clique(a){
             document.getElementById('Divided').style.backgroundColor="";
             document.getElementById('Divided').style.color="";
             linha.value = valor1;
+            ACValue();
             break;
 
         case 'Subtrair':
@@ -171,6 +195,7 @@ function Clique(a){
             document.getElementById('Times').style.backgroundColor="";
             document.getElementById('Times').style.color="";
             linha.value = valor1;
+            ACValue();
             break;
 
             
@@ -187,6 +212,7 @@ function Clique(a){
             document.getElementById('Minus').style.backgroundColor="";
             document.getElementById('Minus').style.color="";
             linha.value = valor1;
+            ACValue();
             break;
     }
 
@@ -198,6 +224,7 @@ function Clique(a){
             valor1 = parseFloat(total);
             document.getElementById('Divided').style.backgroundColor="";
             document.getElementById('Divided').style.color="";
+            ACValue();
         }
 
         if (op == "*") {
@@ -207,6 +234,7 @@ function Clique(a){
             valor1 = parseFloat(total);
             document.getElementById('Times').style.backgroundColor="";
             document.getElementById('TImes').style.color="";
+            ACValue();
         }
 
         if (op == "-") {
@@ -216,6 +244,7 @@ function Clique(a){
             valor1 = parseFloat(total);
             document.getElementById('Minus').style.backgroundColor="";
             document.getElementById('Minus').style.color="";
+            ACValue();
         }
 
         if (op == "+") {
@@ -225,6 +254,7 @@ function Clique(a){
             valor1 = parseFloat(total);
             document.getElementById('Plus').style.backgroundColor="";
             document.getElementById('Plus').style.color="";
+            ACValue();
         }          
     }
 }
