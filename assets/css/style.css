@@ -15,8 +15,8 @@ html, body{
 }
 
 .conteudo{
-    height: 600px;
-    width: 360px;
+    height: 100vh;
+    width: 375px;
     background-color: black;
     display: flex;
     justify-content: flex-end;
