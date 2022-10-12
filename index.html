@@ -11,12 +11,11 @@
 <body>
     <div class="conteudo">
         <div class="visor">
-            <input type="text" name="result" id="result" value="" readonly class="result">
             <input type="text" name="linha" id="linha" value="0" readonly class="linha">
         </div>
 
         <div class="buttons">
-            <input type="button" value="AC" name="AllClear" id="AllClear" class="bgray" onclick="Clique('Apagar')">
+            <input type="button" value="AC" name="AllClear" id="AllClear" class="bgray" onclick="Apagar()">
             <input type="button" value="+/-" name="SoSo" id="SoSo" class="bgray" onclick="Clique('MM')">
             <input type="button" value="%" name="Percent" id="Percent" class="bgray" onclick="Clique('Porcento')">
             <input type="button" value="÷" name="Divided" id="Divided" class="borange" onclick="Clique('Dividir')">
@@ -38,7 +37,7 @@
 
             <input type="button" value="0" name="Zero" id="Zero" class="bdarkgray" onclick="Clique('Zero')">
             <input type="button" value="," name="Comma" id="Comma" class="bdarkgray" onclick="Clique('Virgula')">
-            <input type="button" value="=" name="Equal" id="Equal" class="borange" onclick="Clique('Igual')">
+            <input type="button" value="=" name="Equal" id="Equal" class="borange" onclick="Igual()">
         </div>
     </div>
 </body>
