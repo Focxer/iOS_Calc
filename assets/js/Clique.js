@@ -189,7 +189,9 @@ function Clique(a){
             break;
 
         case 'Dividir':
-            Igual();
+            if (op == '/'){
+                Igual();
+            }
             valor1 = parseFloat(linha.value);
             op = "/";
             resultado = "";
@@ -200,7 +202,9 @@ function Clique(a){
             break;
 
         case 'Multiplicar':
-            Igual();
+            if (op == '*'){
+                Igual();
+            }
             valor1 = parseFloat(linha.value);
             op = "*";
             resultado = "";
@@ -211,7 +215,9 @@ function Clique(a){
             break;
 
         case 'Subtrair':
-            Igual();
+            if (op == '-'){
+                Igual();
+            }
             valor1 = parseFloat(linha.value);
             op = "-";
             resultado = "";
@@ -223,6 +229,9 @@ function Clique(a){
 
             
         case 'Somar':
+            if (op == '+') {
+                Igual();
+            }
             valor1 = parseFloat(linha.value);
             op = "+";
             resultado = "";
